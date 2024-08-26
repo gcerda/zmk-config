@@ -160,8 +160,8 @@
  */
                         bindings = <
 &kp  INS      &kp  ES_EXLM  &kp  ES_DQUO  &kp  ES_BULT  &kp  ES_DLR   &kp  ES_PERC                                                                   &kp ES_AMPR   &kp  ES_SLSH  &kp  ES_LPRN  &kp  ES_RPRN  &kp  ES_EQL   &kp  DEL
-&caps_word    &kp  LALT(N1) &none    &kp  ES_HASH  &kp  ES_LBRC  &kp  ES_RBRC                                                                   &kp ES_IQUE   &kp  ES_QUES  &kp  ES_CIRC  &kp  HOME     &none         &kp ES_GRV
-&trans        &none         &none         &kp  ES_CCED  &kp  ES_LCBR  &kp  ES_RCBR  &none                                              &none         &kp ES_IEXL   &kp  ES_PLUS  &kp  ES_ASTR  &kp  END      &kp  PG_UP    &trans
+&kp  INS      &kp  ES_EXLM  &kp  ES_DQUO  &kp  ES_BULT  &kp  ES_DLR   &kp  ES_PERC                                                                   &kp ES_IQUE   &kp  ES_QUES  &kp  ES_CIRC  &kp  HOME     &none         &kp ES_GRV
+&kp  INS      &kp  ES_EXLM  &kp  ES_DQUO  &kp  ES_BULT  &kp  ES_DLR   &kp  ES_PERC  &none                                              &none         &kp ES_IEXL   &kp  ES_PLUS  &kp  ES_ASTR  &kp  END      &kp  PG_UP    &trans
 &none         &none         &trans                      &trans        &trans        &trans        &mo  ADJ_L               &trans      &kp  SPACE    &kp ES_RABK   &kp  ES_UNDS                &none         &kp  PG_DN    &none
                         >;
 
