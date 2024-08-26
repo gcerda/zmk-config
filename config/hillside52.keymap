@@ -138,7 +138,7 @@
  * | Copy  |   1   |   2   |   3   |   4   |   5   |-----------------------------------|   6   |   7   |   8   |   9   |   0   | BSPC  |
  * | Cut   |  GUI  |  Alt  | Ctrl  | Shift | Paste |-----------------------------------| PG UP |  Left |  Up   |  Down | Right | PG DN |
  * | Shift |  F1   |  F2   |  F3   |  F4   |  F5   |  UnDo |-------------------| ReDo  |  F6   |  F7   |  F8   |  F9   |  F10  | Shift |
- * | F11   |  F12  | CTRL  |-------| ALT   |  GUI  | SPACE |       |---| ADJ_L |       |       |       |-------| CTRL  | HOME  |  END  |
+ * | F11   |  F12  | CTRL  |-------| ALT   |  GUI  | SPACE |       |---| ADJ_L | SPACE |       |       |-------| CTRL  | HOME  |  END  |
  */
                         bindings = <
 &kp  Copy     &kp  N1       &kp  N2       &kp  N3       &kp  N4       &kp  N5                                                                        &kp   N6      &kp  N7      &kp   N8      &kp   N9      &kp  N0       &trans
@@ -160,7 +160,7 @@
  */
                         bindings = <
 &kp  INS      &kp  ES_EXLM  &kp  ES_DQUO  &kp  ES_BULT  &kp  ES_DLR   &kp  ES_PERC                                                                   &kp ES_AMPR   &kp  ES_SLSH  &kp  ES_LPRN  &kp  ES_RPRN  &kp  ES_EQL   &kp  DEL
-&caps_word    &kp  ES_PIPE  &kp  ES_AT    &kp  ES_HASH  &kp  ES_LBRC  &kp  ES_RBRC                                                                   &kp ES_IQUE   &kp  ES_QUES  &kp  ES_CIRC  &kp  HOME     &none         &kp ES_GRV
+&caps_word    &kp  LALT(N1) &kp  ES_AT    &kp  ES_HASH  &kp  ES_LBRC  &kp  ES_RBRC                                                                   &kp ES_IQUE   &kp  ES_QUES  &kp  ES_CIRC  &kp  HOME     &none         &kp ES_GRV
 &trans        &kp  ES_TILD  &none         &kp  ES_CCED  &kp  ES_LCBR  &kp  ES_RCBR  &none                                              &none         &kp ES_IEXL   &kp  ES_PLUS  &kp  ES_ASTR  &kp  END      &kp  PG_UP    &trans
 &none         &none         &trans                      &trans        &trans        &trans        &mo  ADJ_L               &trans      &kp  SPACE    &kp ES_RABK   &kp  ES_UNDS                &none         &kp  PG_DN    &none
                         >;
