@@ -25,6 +25,54 @@
 #define Redo   LC(Y)
 #define RGB    RGB_TOG
 
+#define ES_MORD GRAVE   // º
+#define ES_QUOT MINUS   // '
+#define ES_IEXL EQUAL   // ¡
+
+#define ES_GRV  LBRC    // ` (dead)
+#define ES_PLUS RBRC    // +
+
+#define ES_NTIL SEMI    // Ñ
+#define ES_ACUT SQT     // ´ (dead)
+#define ES_CCED NUHS    // Ç
+
+#define ES_LABK NUBS    // <
+#define ES_COMM COMMA   // ,
+#define ES_DOT  DOT     // .
+#define ES_MINS SLASH   // -
+
+#define ES_FORD LS(ES_MORD) // ª
+#define ES_EXLM LS(N1)    // !
+#define ES_DQUO LS(N2)    // "
+#define ES_BULT LS(N3)    // ·
+#define ES_DLR  LS(N4)    // $
+#define ES_PERC LS(N5)    // %
+#define ES_AMPR LS(N6)    // &
+#define ES_SLSH LS(N7)    // /
+#define ES_LPRN LS(N8)    // (
+#define ES_RPRN LS(N9)    // )
+#define ES_EQL  LS(N0)    // =
+#define ES_QUES LS(ES_QUOT) // ?
+#define ES_IQUE LS(ES_IEXL) // ¿
+#define ES_CIRC LS(ES_GRV)  // ^ (dead)
+#define ES_ASTR LS(ES_PLUS) // *
+#define ES_DIAE LS(ES_ACUT) // ¨ (dead)
+#define ES_RABK LS(ES_LABK) // >
+#define ES_SCLN LS(KC_COMM) // ;
+#define ES_COLN LS(KC_DOT)  // :
+#define ES_UNDS LS(ES_MINS) // _
+#define ES_BSLS LALT(ES_MORD) // (backslash)
+#define ES_PIPE LALT(N1)    // |
+#define ES_AT   LALT(N2)    // @
+#define ES_HASH LALT(N3)    // #
+#define ES_TILD LALT(N4)    // ~
+#define ES_EURO LALT(N5)    // €
+#define ES_NOT  LALT(N6)    // ¬
+#define ES_LBRC LALT(ES_GRV)  // [
+#define ES_RBRC LALT(ES_PLUS) // ]
+#define ES_LCBR LALT(ES_ACUT) // {
+#define ES_RCBR LALT(ES_CCED) // }
+
 
 / {
         keymap {
@@ -67,18 +115,18 @@
                 };
 
                 colemak_layer {
-/* COLEMAK-DH
+/* COLEMAK
  * -------------------------------------------------------------------------------------------------------------------------------------
- * | `     |   Q   |   W   |   F   |   P   |   G   |-----------------------------------|   J   |   L   |   U   |   Y   |   ;   | BKSPC |
- * | TAB   |   A   |   R   |   S   |   T   |   D   |-----------------------------------|   H   |   N   |   E   |   I   |   O   | ENTER |
- * | SHIFT |   Z   |   X   |   C   |   V   |   B   |   '   |-------------------|   /   |   K   |   M   |   ,   |   .   |  Up   | SHIFT |
- * | Mute  |  ESC  | CTRL  |-------|  GUI  |  ALT  |SK SHFT|  Nav  |---|  Sym  | SPACE |  ALT  |  GUI  |-------| Left  | Down  | Right |
+ * | TAB   |   Q   |   W   |   F   |   P   |   G   |-----------------------------------|   J   |   L   |   U   |   Y   |   Ñ   | BKSPC |
+ * | CAPSL |   A   |   R   |   S   |   T   |   D   |-----------------------------------|   H   |   N   |   E   |   I   |   O   | ´     |
+ * | SHIFT |   Z   |   X   |   C   |   V   |   B   |  DEL  |-------------------| ENTER |   K   |   M   |   ,   |   .   |  Up   | SHIFT |
+ * | ESC   | PSCRN | SHIFT |-------| CTRL  |  ALT  |  GUI  |  Nav  |---|  Sym  | SPACE |   <   |   -   |-------| Left  | Down  | Right |
  */
                         bindings = <
-&kp  GRAVE    &kp  Q        &kp  W        &kp  F        &kp  P        &kp  G                                                                         &kp  J        &kp  L        &kp  U        &kp  Y        &kp  SEMI     &kp  BSPC
-&kp  TAB      &kp  A        &kp  R        &kp  S        &kp  T        &kp  D                                                                         &kp  H        &kp  N        &kp  E        &kp  I        &kp  O        &kp  ENTER
-&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  SQT                                           &kp  SLASH    &kp  K        &kp  M        &kp  COMMA    &kp  DOT      &kp  UP       &kp  RSHFT
-&kp  C_MUTE   &kp  ESC      &kp  LCTRL                  &kp  LGUI     &kp  LALT     &sk  LSHIFT     &mo  NAV_L           &mo  SYM_L    &kp  SPACE    &kp  LALT     &kp  RGUI                   &kp  LEFT     &kp  DOWN     &kp  RIGHT
+&kp  TAB      &kp  Q        &kp  W        &kp  F        &kp  P        &kp  G                                                                         &kp  J        &kp  L        &kp  U        &kp  Y        &kp  ES_NTIL  &kp  BSPC
+&kp  CAPS     &kp  A        &kp  R        &kp  S        &kp  T        &kp  D                                                                         &kp  H        &kp  N        &kp  E        &kp  I        &kp  O        &kp  ES_ACUT
+&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  DEL                                           &kp  ENTER    &kp  K        &kp  M        &kp  COMMA    &kp  DOT      &kp  UP       &kp  RSHFT
+&kp  ESC      &kp  PSCRN    &kp  LSHIFT                 &kp  LCTRL    &kp  LALT     &sk  LGUI       &mo  NAV_L           &mo  SYM_L    &kp  SPACE    &kp  ES_LABK  &kp  ES_MINS                &kp  LEFT     &kp  DOWN     &kp  RIGHT
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
