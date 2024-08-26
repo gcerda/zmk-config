@@ -125,7 +125,7 @@
                         bindings = <
 &kp  TAB      &kp  Q        &kp  W        &kp  F        &kp  P        &kp  G                                                                         &kp  J        &kp  L        &kp  U        &kp  Y        &kp  ES_NTIL  &kp  BSPC
 &kp  CAPS     &kp  A        &kp  R        &kp  S        &kp  T        &kp  D                                                                         &kp  H        &kp  N        &kp  E        &kp  I        &kp  O        &kp  ES_ACUT
-&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  DEL                                           &kp  ENTER    &kp  K        &kp  M        &kp  COMMA    &kp  DOT      &kp  UP       &kp  RSHFT
+&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  DEL                                           &kp  SPACE    &kp  K        &kp  M        &kp  COMMA    &kp  DOT      &kp  UP       &kp  RSHFT
 &kp  ESC      &kp  PSCRN    &kp  LSHIFT                 &kp  LCTRL    &kp  LALT     &sk  LGUI       &mo  NAV_L           &mo  SYM_L    &kp  SPACE    &kp  ES_LABK  &kp  ES_MINS                &kp  LEFT     &kp  DOWN     &kp  RIGHT
                         >;
 
