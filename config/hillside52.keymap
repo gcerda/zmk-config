@@ -161,8 +161,8 @@
                         bindings = <
 &kp  INS      &kp  ES_EXLM  &kp  ES_DQUO  &kp  ES_BULT  &kp  ES_DLR   &kp  ES_PERC                                                                   &kp ES_AMPR   &kp  ES_SLSH  &kp  ES_LPRN  &kp  ES_RPRN  &kp  ES_EQL   &kp  DEL
 &caps_word    &kp  ES_PIPE  &kp  ES_AT    &kp  ES_HASH  &kp  ES_LBRC  &kp  ES_RBRC                                                                   &kp ES_IQUE   &kp  ES_QUES  &kp  ES_CIRC  &kp  HOME     &none         &kp ES_GRV
-&trans        &none         &kp  ES_TILD  &kp  ES_CCED  &kp  ES_LCBR  &kp  ES_RCBR  &none                                              &none         &kp ES_IEXL   &kp  ES_PLUS  &kp  ES_ASTR  &kp  END      &kp  PG_UP    &trans
-&none         &none         &trans                      &trans        &trans        &trans        &mo  ADJ_L               &trans      &kp  SPACE    &kp ES_RABK   &kp  ES_UNDS                &none         &kp  PG_DN    &none
+&trans        &none         &kp  ES_TILD  &kp  ES_CCED  &kp  ES_LCBR  &kp  ES_RCBR  &none                                              &none         &kp ES_IEXL   &kp  RBRC     &kp  ES_ASTR  &kp  END      &kp  PG_UP    &trans
+&none         &none         &trans                      &trans        &trans        &trans        &mo  ADJ_L               &trans      &kp  SPACE    &kp ES_RABK   &kp  ES_U        NDS                &none         &kp  PG_DN    &none
                         >;
 
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
