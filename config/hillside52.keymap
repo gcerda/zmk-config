@@ -12,11 +12,9 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #define COLEMK_L 0
-#define DVORAK_L 1
-#define QWERTY_L 2
-#define NAV_L    3
-#define SYM_L    4
-#define ADJ_L    5
+#define NAV_L    1
+#define SYM_L    2
+#define ADJ_L    3
 
 #define Undo   LC(Z)
 #define Cut    LC(X)
@@ -90,46 +88,9 @@
 &kp  TAB      &kp  Q        &kp  W        &kp  F        &kp  P        &kp  G                                                                         &kp  J        &kp  L        &kp  U        &kp  Y        &kp  ES_NTIL  &kp  BSPC
 &kp  CAPS     &kp  A        &kp  R        &kp  S        &kp  T        &kp  D                                                                         &kp  H        &kp  N        &kp  E        &kp  I        &kp  O        &kp  ES_ACUT
 &kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  DEL                                           &kp  ENTER    &kp  K        &kp  M        &kp  COMMA    &kp  DOT      &kp  UP       &kp  RSHFT
-&kp  ESC      &kp  LSHIFT   &kp  LCTRL                  &kp  LALT     &kp  LGUI     &sk  SPACE      &mo  NAV_L           &mo  SYM_L    &kp  SPACE    &kp  ES_LABK  &kp  ES_MINS                &kp  LEFT     &kp  DOWN     &kp  RIGHT
+&kp  ESC      &kp  LSHIFT   &kp  LCTRL                  &kp  LALT     &kp  LGUI     &kp  SPACE      &mo  NAV_L           &mo  SYM_L    &kp  SPACE    &kp  ES_LABK  &kp  ES_MINS                &kp  LEFT     &kp  DOWN     &kp  RIGHT
                         >;
 
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
-
-                dvorak_layer {
-/* DVORAK
- * -------------------------------------------------------------------------------------------------------------------------------------
- * | `     |   '   |   ,   |   .   |   P   |   Y   |-----------------------------------|   F   |   G   |   C   |   R   |   L   | BKSPC |
- * | TAB   |   A   |   O   |   E   |   U   |   I   |-----------------------------------|   D   |   H   |   T   |   N   |   S   | ENTER |
- * | SHIFT |   ;   |   Q   |   J   |   K   |   X   |   Z   |-------------------|   /   |   B   |   M   |   W   |   V   |  Up   | SHIFT |
- * | Mute  |  ESC  | CTRL  |-------|  GUI  |  ALT  |SK SHFT|  Nav  |---|  Sym  | SPACE |  ALT  |  GUI  |-------| Left  | Down  | Right |
- */
-                        bindings = <
-&kp  GRAVE    &kp  SQT      &kp  COMMA    &kp  DOT      &kp  P        &kp  Y                                                                         &kp  F        &kp  G        &kp  C        &kp  R        &kp  L        &kp  BSPC
-&kp  TAB      &kp  A        &kp  O        &kp  E        &kp  U        &kp  I                                                                         &kp  D        &kp  H        &kp  T        &kp  N        &kp  S        &kp  ENTER
-&kp  LSHFT    &kp  SEMI     &kp  Q        &kp  J        &kp  K        &kp  X        &kp  Z                                             &kp  SLASH    &kp  B        &kp  M        &kp  W        &kp  V        &kp  UP       &kp  RSHFT
-&kp  C_MUTE   &kp  ESC      &kp  LCTRL                  &kp  LGUI     &kp  LALT     &sk  LSHIFT    &mo  NAV_L            &mo  SYM_L    &kp  SPACE    &kp  LALT     &kp  RGUI                   &kp  LEFT     &kp  DOWN     &kp  RIGHT
-                        >;
-
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
-
-                qwerty_layer {
-/* QWERTY
- * -------------------------------------------------------------------------------------------------------------------------------------
- * | `     |   Q   |   W   |   E   |   R   |   T   |-----------------------------------|   Y   |   U   |   I   |   O   |   P   | BKSPC |
- * | TAB   |   A   |   S   |   D   |   F   |   G   |-----------------------------------|   H   |   J   |   K   |   L   |   ;   | ENTER |
- * | SHIFT |   Z   |   X   |   C   |   V   |   B   |   '   |-------------------|   /   |   N   |   M   |   ,   |   .   |  Up   | SHIFT |
- * | Mute  |  ESC  | CTRL  |-------|  GUI  |  ALT  |SK SHFT|  Nav  |---|  Sym  | SPACE |  ALT  |  GUI  |-------| Left  | Down  | Right |
- */
-                        bindings = <
-&kp  GRAVE    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSPC
-&kp  TAB      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                         &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  ENTER
-&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  SQT                                           &kp  SLASH    &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  UP       &kp  RSHFT
-&kp  C_MUTE   &kp  ESC      &kp  LCTRL                  &kp  LGUI     &kp  LALT     &sk  LSHIFT    &mo  NAV_L            &mo  SYM_L    &kp  SPACE    &kp  LALT     &kp  RGUI                   &kp  LEFT     &kp  DOWN     &kp  RIGHT
-                        >;
-
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
 
                 nav_layer {
@@ -147,7 +108,6 @@
 &kp  F11      &kp  F12      &trans                      &trans        &trans        &trans        &trans                 &mo ADJ_L     &trans        &trans        &trans                     &kp  RCTRL    &kp  HOME     &kp  END
                         >;
 
-                        sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
                 sym_layer {
@@ -162,17 +122,16 @@
 &kp  INS      &kp  ES_EXLM  &kp  ES_DQUO  &kp  ES_BULT  &kp  ES_DLR   &kp  ES_PERC                                                                   &kp ES_AMPR   &kp  ES_SLSH  &kp  ES_LPRN  &kp  ES_RPRN  &kp  ES_EQL   &kp  DEL
 &caps_word    &kp  ES_PIPE  &kp  ES_AT    &kp  ES_HASH  &kp  ES_LBRC  &kp  ES_RBRC                                                                   &kp ES_IQUE   &kp  ES_QUES  &kp  ES_CIRC  &kp  HOME     &none         &kp ES_GRV
 &trans        &none         &kp  ES_TILD  &kp  ES_CCED  &kp  ES_LCBR  &kp  ES_RCBR  &none                                              &none         &kp ES_IEXL   &kp  RBRC     &kp  ES_ASTR  &kp  END      &kp  PG_UP    &trans
-&none         &none         &trans                      &trans        &trans        &trans        &mo  ADJ_L               &none      &kp  SPACE    &kp ES_RABK   &kp  ES_UNDS                &none         &kp  PG_DN    &none
+&none         &none         &trans                      &trans        &trans        &trans        &mo  ADJ_L               &none                                           &kp  SPACE    &kp ES_RABK   &kp  ES_UNDS                &none         &kp  PG_DN    &none
                         >;
 
-                        sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
 
                 adj_layer {
 /* ADJUST
  * -------------------------------------------------------------------------------------------------------------------------------------
- * |       | COLEMK| DVORAK| QWERTY|       |       |-----------------------------------|       |Prt Scr|       | EP_OFF| EP_ON |       |
+ * |       | COLEMK|       |       |       |       |-----------------------------------|       |Prt Scr|       | EP_OFF| EP_ON |       |
  * | RGB   | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |-----------------------------------|       |       |       |       |       |       |
  * | BOOTL | RESET |       |OUT_USB|OUT_BLE|       |BT CLR |-------------------|       |       |       |       |       |       | SHIFT |
  * ----------------|       |-------|       |       |       |       |---|       |       |       |       |-------| CTRL  |----------------
@@ -184,7 +143,6 @@
 &none         &none         &trans                      &trans        &trans        &trans        &trans                 &trans        &trans           &trans            &trans                              &kp  RCTRL      &none            &none
                         >;
 
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
         };
 };
