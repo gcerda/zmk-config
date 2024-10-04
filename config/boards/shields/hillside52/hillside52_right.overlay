@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "hillside52.dtsi" 
+#include "hillside52.dtsi"
 
 &default_transform {
     col-offset = <6>;
@@ -23,4 +23,8 @@
 
 &right_encoder {
     status = "okay";
+};
+
+&nice_view_spi {
+    cs-gpios = <&pro_micro 04 GPIO_ACTIVE_HIGH>;
 };
